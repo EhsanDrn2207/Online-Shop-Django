@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # local apps
     "accounts",
+    "pages",
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # User Model
 AUTH_USER_MODEL = "accounts.CustomUserModel"
+
+# login and logout config
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
