@@ -8,7 +8,7 @@ from .forms import CustomUserCreationForm
 class SignUpView(generic.CreateView):
     model = get_user_model()
     form_class = CustomUserCreationForm
-    template_name = 'registration/signup.html'
+    template_name = 'account/signup.html'
 
     def get_success_url(self):
-        return reverse('login')
+        return reverse('account_login')
