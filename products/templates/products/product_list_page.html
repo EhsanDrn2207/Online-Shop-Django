@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block page_title %}
+    Products list
+{% endblock %}
+
+{% block content %}
+    {% for product in products %}
+        <a href="{% url "product-detail" product.id %}"><h1>{{ product.title }}</h1></a>
+        <h3>{{ product.price }}</h3>
+        <h3>{{ product.description }}</h3>
+    {% endfor %}
+
+{% endblock %}
