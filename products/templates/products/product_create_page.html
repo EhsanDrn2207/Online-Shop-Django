@@ -1,0 +1,15 @@
+{% extends "_base.html" %}
+{% load crispy_forms_tags %}
+
+{% block page_title %}
+    Products Create
+{% endblock %}
+
+{% block content %}
+    <form action="{% url "product-create" %}" method="post">
+    {% csrf_token %}
+        <h1>Product Create</h1>
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-success">create</button>
+    </form>
+{% endblock %}

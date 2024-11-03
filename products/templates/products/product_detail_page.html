@@ -2,11 +2,13 @@
 {% load crispy_forms_tags %}
 
 {% block page_title %}
-    Products list
+    Products Detail {{ product.title }}
 {% endblock %}
 
 {% block content %}
     <h1>{{ product.title }}</h1>
     <h3>{{ product.price }}</h3>
     <h3>{{ product.description }}</h3>
+
+    <a href="{% url "product-update" product.id%}">edit</a>
 {% endblock %}

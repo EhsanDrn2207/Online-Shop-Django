@@ -11,5 +11,5 @@
         <h3>{{ product.price }}</h3>
         <h3>{{ product.description }}</h3>
     {% endfor %}
-
+    <a href="{% url "product-create" %}">create new post</a>
 {% endblock %}
