@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Product
+from .models import Product, Comment
 
 
 class ProductAdmin(admin.ModelAdmin):
@@ -9,3 +9,10 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Product, ProductAdmin)
+
+
+class ProductCommentAdmin(admin.ModelAdmin):
+    list_display = ['product', 'user', 'is_active', 'is_recommend']
+
+
+admin.site.register(Comment, ProductCommentAdmin)
