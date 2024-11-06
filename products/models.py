@@ -36,13 +36,13 @@ class Comment(models.Model):
         ('1', 'very bad'),
     )
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments')
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments')
-    body = models.TextField()
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments', verbose_name='comment-author')
+    body = models.TextField(verbose_name='comment-text')
     created_datetime = models.DateTimeField(auto_now_add=True)
     modified_datetime = models.DateTimeField(auto_now=True)
-    stars = models.CharField(choices=STARTS_CHOICES, max_length=10)
+    stars = models.CharField(choices=STARTS_CHOICES, max_length=10, verbose_name='score')
     is_active = models.BooleanField(default=True)
-    is_recommend = models.BooleanField(default=True)
+    is_recommend = models.BooleanField(default=True, verbose_name='recommend')
 
     # Manager
     object = models.Manager()
