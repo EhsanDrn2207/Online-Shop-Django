@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-
+from django.utils.translation import gettext_lazy as _
 from django.contrib.auth import get_user_model
 
 User = get_user_model()
@@ -29,20 +29,20 @@ class ActiveCommentsManager(models.Manager):
 
 class Comment(models.Model):
     STARTS_CHOICES = (
-        ('5', 'Perfect'),
-        ('4', 'good'),
-        ('3', 'normal'),
-        ('2', 'bad'),
-        ('1', 'very bad'),
+        ('5', _('Perfect')),
+        ('4', _('good')),
+        ('3', _('normal')),
+        ('2', _('bad')),
+        ('1', _('very bad')),
     )
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='comments')
-    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments', verbose_name='comment-author')
-    body = models.TextField(verbose_name='comment-text')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='comments', verbose_name=_('comment-author'))
+    body = models.TextField(verbose_name=_('comment-text'))
     created_datetime = models.DateTimeField(auto_now_add=True)
     modified_datetime = models.DateTimeField(auto_now=True)
-    stars = models.CharField(choices=STARTS_CHOICES, max_length=10, verbose_name='score')
+    stars = models.CharField(choices=STARTS_CHOICES, max_length=10, verbose_name=_('score'))
     is_active = models.BooleanField(default=True)
-    is_recommend = models.BooleanField(default=True, verbose_name='recommend')
+    is_recommend = models.BooleanField(default=True, verbose_name=_('recommend'))
 
     # Manager
     object = models.Manager()
