@@ -89,16 +89,16 @@
                                     </a>
                                     <ul class="user-info-menu">
                                         <li>
-                                            <a class="text-right" href="my-account.html">حساب کاربری</a>
+                                            <a class="text-right" href="my-account.html">{% trans 'user account' %}</a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="cart.html">سبد خرید</a>
+                                            <a class="text-right" href="cart.html">{% trans 'cart' %}</a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="wishlist.html">علاقه مندی ها</a>
+                                            <a class="text-right" href="wishlist.html">{% trans 'favorites' %}</a>
                                         </li>
                                         <li>
-                                            <a class="text-right" href="order-tracking.html">تاریخچه سفارشات</a>
+                                            <a class="text-right" href="order-tracking.html">{% trans 'history' %}</a>
                                         </li>
                                     </ul>
                                 </li>
@@ -137,9 +137,9 @@
                             </div>
                             <div class="footer-widget mb--50 pb--1">
                                 <ul class="footer-menu">
-                                    <li><a href="">درباره ما</a></li>
-                                    <li><a href="">قوانین و مقررات</a></li>
-                                    <li><a href="">تماس با ما</a></li>
+                                    <li><a href="">{% trans 'about us' %}</a></li>
+                                    <li><a href="">{% trans 'regulations' %}</a></li>
+                                    <li><a href="">{% trans 'contact with us' %}</a></li>
                                 </ul>
                             </div>
                             <div class="footer-widget">
@@ -170,7 +170,7 @@
             <div class="mini-cart-wrapper">
                 <a href="" class="btn-close"><i class="flaticon flaticon-cross"></i></a>
                 <div class="mini-cart-inner">
-                    <h3 class="mini-cart__heading mb--40 mb-lg--30 text-right">سبد خرید</h3>
+                    <h3 class="mini-cart__heading mb--40 mb-lg--30 text-right">{% trans 'cart' %}</h3>
                     <div class="mini-cart__content">
                         <ul class="mini-cart__list text-right">
                             <li class="mini-cart__product d-flex justify-content-between">
@@ -229,12 +229,12 @@
                             </li>
                         </ul>
                         <div class="mini-cart__total">
-                            <span>جمع کل</span>
+                            <span>{% trans 'total cost' %}</span>
                             <span class="ammount">۱۴۸,۰۰۰ تومان</span>
                         </div>
                         <div class="mini-cart__buttons">
-                            <a href="cart.html" class="btn btn-fullwidth btn-bg-sand mb--20">مشاهده سبد خرید</a>
-                            <a href="checkout.html" class="btn btn-fullwidth btn-bg-sand">پرداخت</a>
+                            <a href="cart.html" class="btn btn-fullwidth btn-bg-sand mb--20">{% trans 'check the cart' %}</a>
+                            <a href="checkout.html" class="btn btn-fullwidth btn-bg-sand">{% trans 'payment' %}</a>
                         </div>
                     </div>
                 </div>
