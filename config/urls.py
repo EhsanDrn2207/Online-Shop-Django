@@ -23,7 +23,7 @@ urlpatterns = [
     path('rosetta/', include('rosetta.urls')),
     path("accounts/", include("accounts.urls")),
     path("accounts/", include("allauth.urls")),
-    path("", include("pages.urls")),
     path("products/", include("products.urls")),
     path("cart/", include("cart.urls")),
+    path("", include("pages.urls")),
 ]

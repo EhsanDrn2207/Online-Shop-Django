@@ -1,7 +1,8 @@
-from django.shortcuts import render
 from django.views import generic
 from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
+from django.utils.translation import gettext as _
+from django.contrib import messages
 
 from .models import Product, Comment
 from .forms import ProductForm, CommentForm
@@ -48,8 +49,12 @@ class CommentCreateView(generic.CreateView):
     def form_valid(self, form):
         obj = form.save(commit=False)
         obj.user = self.request.user
+
         product_id = int(self.kwargs['product_id'])
         product = get_object_or_404(Product, pk=product_id)
         obj.product = product
+
+        messages.success(self.request, _("Comment successfully created"))
+
         return super().form_valid(form)
 

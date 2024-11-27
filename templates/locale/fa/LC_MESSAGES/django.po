@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-13 18:42+0330\n"
+"POT-Creation-Date: 2024-11-27 13:03+0330\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,54 +18,67 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\_base.html:51
+#: .\_base.html:52
 msgid "home"
 msgstr "خانه"
 
-#: .\_base.html:56
+#: .\_base.html:57
 msgid "weblog"
 msgstr "وبلاگ"
 
-#: .\_base.html:61
+#: .\_base.html:62
 msgid "pages"
 msgstr "صفحات"
 
-#: .\_base.html:66 .\_base.html:142
+#: .\_base.html:67 .\_base.html:157
 msgid "contact with us"
 msgstr "تماس با ما"
 
-#: .\_base.html:92
-msgid "user account"
-msgstr "حساب کاربری"
+#: .\_base.html:94
+msgid "log out"
+msgstr "خروج"
 
-#: .\_base.html:95 .\_base.html:173
-msgid "cart"
-msgstr "سبد خرید"
+#: .\_base.html:97
+msgid "Profile"
+msgstr ""
 
-#: .\_base.html:98
-msgid "favorites"
-msgstr "علاقه مندی ها"
+#: .\_base.html:102
+msgid "log in"
+msgstr "ورود به حساب کاربری"
 
-#: .\_base.html:101
-msgid "history"
-msgstr "تاریخچه"
+#: .\_base.html:105
+msgid "sign up"
+msgstr "ثبت نام"
 
-#: .\_base.html:140
+#: .\_base.html:155
 msgid "about us"
 msgstr "درباره ی ما"
 
-#: .\_base.html:141
+#: .\_base.html:156
 msgid "regulations"
 msgstr "قوانین و مقررات"
 
-#: .\_base.html:232
+#: .\_base.html:190
+msgid "cart"
+msgstr "سبد خرید"
+
+#: .\_base.html:249
 msgid "total cost"
 msgstr "جمع کل"
 
-#: .\_base.html:236
+#: .\_base.html:254
 msgid "check the cart"
 msgstr "مشاهده سبد خرید"
 
-#: .\_base.html:237
+#: .\_base.html:255
 msgid "payment"
 msgstr "پرداخت"
+
+#~ msgid "user account"
+#~ msgstr "حساب کاربری"
+
+#~ msgid "favorites"
+#~ msgstr "علاقه مندی ها"
+
+#~ msgid "history"
+#~ msgstr "تاریخچه"

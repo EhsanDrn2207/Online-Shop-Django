@@ -152,11 +152,16 @@
                                                 <div class="col-lg-8 m-auto">
                                                     <span class="reply-title pull-right">{% trans 'write your comment' %}</span>
                                                     <br>
+                                                    {% if user.is_authenticated %}
                                                     <form action="{% url "comment-create" product.id %}" method="post">
                                                         {% csrf_token %}
                                                         {{ comment_form|crispy }}
                                                         <button type="submit">{% trans 'submit' %}</button>
                                                     </form>
+                                                    {% else %}
+                                                        <p>{% trans "To write you comment please " %}
+                                                            <a href="{% url "account_login" %}"> {% trans "Do login" %}</a></p>
+                                                    {% endif %}
                                                 </div>
                                             </div>
                                         </div>
