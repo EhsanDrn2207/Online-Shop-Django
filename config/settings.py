@@ -164,6 +164,8 @@ LOCALE_PATHS = [
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
@@ -176,8 +178,8 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 AUTH_USER_MODEL = "accounts.CustomUserModel"
 
 # login and logout config
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"
+LOGIN_REDIRECT_URL = "product-list"
+LOGOUT_REDIRECT_URL = "product-list"
 
 # crispy config
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"

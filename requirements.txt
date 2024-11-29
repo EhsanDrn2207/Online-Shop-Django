@@ -5,3 +5,4 @@ crispy-bootstrap5==2024.10
 django-crispy-forms==2.3
 django-allauth==65.1.0
 django-rosetta==0.10.1
+pillow==11.0.0

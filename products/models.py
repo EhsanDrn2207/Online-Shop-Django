@@ -13,7 +13,7 @@ class Product(models.Model):
     is_active = models.BooleanField(default=True)
     created_datetime = models.DateTimeField(auto_now_add=True)
     updated_datetime = models.DateTimeField(auto_now=True)
-    # cover = models.ImageField(upload_to="covers/")
+    image = models.ImageField(verbose_name=_("Product Image"), upload_to="product/product_cover/", blank=True, )
 
     def __str__(self):
         return self.title
