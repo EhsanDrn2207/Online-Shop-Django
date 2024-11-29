@@ -10,6 +10,10 @@
 {% endblock %}
 
 {% block content %}
+    <!-- Breadcrumb area Start -->
+    {% translate 'Cart' as headername %}
+    {% include "topheader.html" with header_name=headername %}
+    <!-- Breadcrumb area End -->
 
     <!-- Main Content Wrapper Start -->
     <div class="main-content-wrapper">
