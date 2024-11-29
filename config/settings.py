@@ -32,7 +32,7 @@ SECRET_KEY = "django-insecure-05xk^5#j-mf395z)uch!p1nlrmi3imqkg_w$83)g-=q7m%tgbm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost", "0.0.0.0", "onlineshopdjangouni.pythonanywhere.com"]
+ALLOWED_HOSTS = ["127.0.0.1", "localhost", "0.0.0.0", "https://onlineshopdjangouni.pythonanywhere.com/"]
 
 
 # Application definition
@@ -163,6 +163,7 @@ LOCALE_PATHS = [
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
