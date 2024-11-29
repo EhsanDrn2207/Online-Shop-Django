@@ -38,8 +38,10 @@
                                             <div class="product-inner">
                                                 <figure class="product-image">
                                                     <a href="{% url "product-detail" product.id %}">
+                                                        {% if product.image%}
                                                         <img src="{{ product.image.url }}"
                                                              alt="Products">
+                                                        {% endif %}
                                                     </a>
                                                     <div class="ShoppingYar-product-action">
                                                         <div class="product-action d-flex">
