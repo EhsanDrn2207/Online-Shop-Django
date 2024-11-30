@@ -32,35 +32,37 @@
                         <div class="tab-content" id="product-tab-content">
                             <div class="tab-pane fade show active" id="nav-all">
                                 <div class="row xxl-block-grid-6 grid-space-20">
-                                    {% for product in products %}
-                                        <div class="col-xl-3 col-md-4 col-sm-6 mb--50">
-                                            <div class="ShoppingYar-product">
-                                                <div class="product-inner">
-                                                    <figure class="product-image">
-                                                        <a href="{% url "product-detail" product.id %}">
-                                                            <img src="{{ product.image.url }}"
-                                                                 alt="Products">
-                                                        </a>
-                                                        <div class="ShoppingYar-product-action">
-                                                            <div class="product-action d-flex">
-                                                                <a href="#" class="action-btn">
-                                                                    <i class="flaticon flaticon-like"></i>
-                                                                </a>
-                                                            </div>
+                                    {% for product in products  %}
+                                    <div class="col-xl-3 col-md-4 col-sm-6 mb--50">
+                                        <div class="ShoppingYar-product">
+                                            <div class="product-inner">
+                                                <figure class="product-image">
+                                                    <a href="{% url "product-detail" product.id %}">
+                                                        {% if product.image%}
+                                                        <img src="{{ product.image.url }}"
+                                                             alt="Products">
+                                                        {% endif %}
+                                                    </a>
+                                                    <div class="ShoppingYar-product-action">
+                                                        <div class="product-action d-flex">
+                                                            <a href="#" class="action-btn">
+                                                                <i class="flaticon flaticon-like"></i>
+                                                            </a>
                                                         </div>
-                                                        <span class="product-badge">تخفیف ویژه</span>
-                                                    </figure>
-                                                    <div class="product-info">
-                                                        <h3 class="product-title h6 mb--15">
-                                                            <a href="{% url "product-detail" product.id %}">{{ product.title }}</a>
-                                                        </h3>
-                                                        <div class="product-price-wrapper mb--30">
-                                                            <span class="money text-success">{{ product.price }}</span>
-                                                        </div>
+                                                    </div>
+                                                    <span class="product-badge">تخفیف ویژه</span>
+                                                </figure>
+                                                <div class="product-info">
+                                                    <h3 class="product-title h6 mb--15">
+                                                        <a href="{% url "product-detail" product.id %}">{{ product.title }}</a>
+                                                    </h3>
+                                                    <div class="product-price-wrapper mb--30">
+                                                        <span class="money text-success">{{ product.price }}</span>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>
 
                                     {% endfor %}
 
@@ -69,36 +71,13 @@
                         </div>
                         <nav class="pagination-wrap mt--35 mt-md--25 pb-5">
                             <ul class="pagination">
-                                <!-- Previous Button -->
-                                {% if page_obj.has_previous %}
-                                    <li>
-                                        <a href="?page={{ page_obj.previous_page_number }}" class="prev page-number"
-                                           aria-label="Previous">
-                                            <i class="fa fa-angle-double-left"></i>
-                                        </a>
-                                    </li>
-                                {% endif %}
-
-                                <!-- Page Numbers -->
-                                {% for page_num in page_obj.paginator.page_range %}
-                                    <li>
-                                        {% if page_num == page_obj.number %}
-                                            <span class="current page-number">{{ page_num }}</span>
-                                        {% else %}
-                                            <a href="?page={{ page_num }}" class="page-number">{{ page_num }}</a>
-                                        {% endif %}
-                                    </li>
-                                {% endfor %}
-
-                                <!-- Next Button -->
-                                {% if page_obj.has_next %}
-                                    <li>
-                                        <a href="?page={{ page_obj.next_page_number }}" class="next page-number"
-                                           aria-label="Next">
-                                            <i class="fa fa-angle-double-right"></i>
-                                        </a>
-                                    </li>
-                                {% endif %}
+                                <li><a href="#" class="next page-number"><i class="fa fa-angle-double-right"></i></a>
+                                </li>
+                                <li><span class="current page-number">1</span></li>
+                                <li><a href="#" class="page-number">2</a></li>
+                                <li><a href="#" class="page-number">3</a></li>
+                                <li><a href="#" class="prev page-number"><i class="fa fa-angle-double-left"></i></a>
+                                </li>
                             </ul>
                         </nav>
                     </div>
