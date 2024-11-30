@@ -17,3 +17,23 @@ body {
     font-family: "IRANSansX", serif;
     text-align:right !important;
 }
+
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 5px;
+}
+
+.pagination .page-number {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination .current {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}

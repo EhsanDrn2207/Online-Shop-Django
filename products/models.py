@@ -9,6 +9,8 @@ User = get_user_model()
 class Product(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
+    features = models.TextField(blank=True)
+    category = models.CharField(max_length=100, blank=True)
     price = models.PositiveIntegerField()
     is_active = models.BooleanField(default=True)
     created_datetime = models.DateTimeField(auto_now_add=True)
