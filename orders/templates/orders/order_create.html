@@ -91,23 +91,19 @@
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <th>محصول شماره یک
-                                            <strong><span>&#10005;</span>۲</strong>
-                                        </th>
-                                        <td class="text-right">۲۹۶,۰۰۰ تومان</td>
-                                    </tr>
-                                    <tr>
-                                        <th>محصول شماره دو
-                                            <strong><span>&#10005;</span>۱</strong>
-                                        </th>
-                                        <td class="text-right">۵۸,۰۰۰ تومان</td>
-                                    </tr>
+                                        {% for item in cart %}
+                                            <tr>
+                                                <th>{{ item.product_obj.title }}
+                                                    <strong><span>&#10005;</span>{{ item.quantity }}</strong>
+                                                </th>
+                                                <td class="text-right">{{ item.product_obj.price }} {% translate "$" %}</td>
+                                            </tr>
+                                        {% endfor %}
                                     </tbody>
                                     <tfoot>
                                     <tr class="cart-subtotal">
                                         <th>مجموع</th>
-                                        <td class="text-right">۳۴۸,۰۰۰ تومان</td>
+                                        <td class="text-right">{{ cart.get_total_price }} {% translate "$" %}</td>
                                     </tr>
                                     </tfoot>
                                 </table>
