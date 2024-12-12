@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-from environs import Env
+# from environs import Env
 from django.contrib.messages import constants as messages
 import os
 
@@ -21,8 +21,8 @@ MESSAGES_TAGS = {messages.ERROR: 'danger', messages.SUCCESS: 'success',}
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-env = Env()
-env.read_env()
+# env = Env()
+# env.read_env()
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
