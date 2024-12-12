@@ -57,8 +57,19 @@
                                                             <a href="{% url "product-detail" product.id %}">{{ product.title }}</a>
                                                         </h3>
                                                         <div class="product-price-wrapper mb--30">
-                                                            <span class="money text-success">{{ product.price }}</span>
+                                                            <span class="money text-success">{{ product.price }} {% translate "$" %}</span>
                                                         </div>
+                                                        <form action="{% url "cart:cart_add" product.id %}"
+                                                              method="post">
+                                                            {% csrf_token %}
+                                                            <input type="hidden" class="quantity-input" name="quantity" id="qty" value="1" min="1" max="30">
+                                                            <div class="quantity-wrapper">
+                                                                <button type="submit"
+                                                                        class="btn btn-small btn-bg-red btn-color-white btn-hover-2">
+                                                                    {% trans "add to cart" %}
+                                                                </button>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                 </div>
                                             </div>
